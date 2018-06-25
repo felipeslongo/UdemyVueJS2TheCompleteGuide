@@ -4,11 +4,12 @@ new Vue({
     effectClasses:{
       highlight: true,
       shrink: false,
-    }
-  },
-  computed: {
-    effectClassesComputed: () => {
-      return effectClasses;
+    },
+    coupleOfCssClasses: ['red', 'solid'],
+    userClass: '',
+    userClasses:{
+      mainClass: '',
+      isShrinked: false
     }
   },
   methods: {

@@ -13,3 +13,25 @@
   background-color: gray;
   width: 50px !important;
 }
+
+.square{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.red {
+  background-color: crimson;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.solid {
+  border: 1px solid blue
+}
