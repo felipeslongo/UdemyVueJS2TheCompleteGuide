@@ -1,0 +1,40 @@
+
+<!-- Put this in the HTML section in JSFiddle! -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+	<!-- Iterate thru array with primitives-->
+	<ul>
+		<li v-for="(ingredient, index) in ingredients">{{ingredient}} ({{index}})</li>
+	</ul>	
+	<button @click="ingredients.push('spice')">Add Spice!</button>
+
+	<hr>
+	<!-- Iterate thru array with objects-->
+	<ul>
+		<li v-for="person in persons">{{person.name}}</li>
+	</ul>
+
+	<!-- Nested Iteration-->
+	<ul>
+		<li v-for="person in persons" :key="person.name">
+			<!-- Object keyValue properties Iteration-->
+			<div v-for="(property, key, index) in person">{{key}}:{{property}} ({{index}})</div>
+		</li>
+	</ul>
+	<div>"Max Age: {{persons[0].age}}"</div>
+	<button @click="persons[0].age = persons[0].age + 1">Age Max</button>	
+
+
+	<hr>
+	<!-- Using template to nest objects thru iteration-->
+	<template v-for="(ingredient, index) in ingredients">
+		<h1>Ingredient: {{ingredient}}</h1>
+		<p>Index: {{index}}</p>
+	</template>
+
+	<hr>
+	<!-- Number Iteration-->
+	<span v-for="n in 10">{{n}}</span>
+</div>
+<script src="app.js"></script>

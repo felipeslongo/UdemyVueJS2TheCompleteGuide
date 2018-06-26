@@ -1,0 +1,29 @@
+
+<!-- Put this in the HTML section in JSFiddle! -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+	<h1 v-show="show">I am invisible!</h1>
+	<!-- Simple If-Else -->
+	<p v-if="show">You can see me!
+		<span>Hello!</span>
+	</p>
+	<p v-else>Now you see me!</p>
+	<p>Do you also see me?</p>
+	<button @click="show = !show">switch</button>
+
+	<!-- Conditional Groups with v-if on <template>  -->
+	<template v-if="show">
+			<h1>Title</h1>
+			<p>Paragraph 1</p>
+			<p>Paragraph 2</p>
+	</template>
+	
+	<!-- Simple If-IfElse-Else -->
+	<input placeholder="Inform a number please" v-model:value="number"></input>
+	<p v-if="number === null || number === ''">Where is the number???</p>
+	<p v-else-if="number % 2 === 1">Odd!</p>
+	<p v-else-if="number % 2 === 0">Even!</p>
+	<p v-else>Not a Number!!!</p>
+</div>
+<script src="app.js"></script>
