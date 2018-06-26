@@ -20,6 +20,12 @@
   border: 1px solid black;
 }
 
+.rectangle{
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
 .red {
   background-color: crimson;
 }
@@ -35,3 +41,16 @@
 .solid {
   border: 1px solid blue
 }
+
+.progressBackground{
+  width: 200px;
+  height: 15px;
+  background-color: aqua;
+}
+
+.progressForeground{
+  width: 0px;
+  height: 15px;
+  background-color: blue;
+}
+

@@ -21,18 +21,22 @@
   <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
   <div>
     <input type="text" v-model:value="userClasses.mainClass">
-    <input type="text">
-    <div class="square">User Classes</div>
+    <input type="text" @keyup="setIsShrinked($event)">
+    <div class="square" :class="userClassesArray">User Classes</div>
   </div>
   <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
   <div>
-    <input type="text">
-    <div></div>
+    <input type="text" v-model:style="userStyles">
+    <!-- <div style="height: 100px;width: 100px; border: 1px solid rebeccapurple; background-color: red">Style Me!</div> -->
+    <!-- <div :style="[{height: '100px'}, {width: '100px'}, {border: '1px solid rebeccapurple'}]">Style Me!</div> -->
+    <div :style="userStylesArray">Style Me!</div>
   </div>
   <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
   <div>
     <button v-on:click="startProgress">Start Progress</button>
-    <div></div>
+    <div class="progressBackground">
+      <div class="progressForeground" :style="progressStyle"></div>
+    </div>
   </div>
 </div>
 <script src="app.js"></script>
