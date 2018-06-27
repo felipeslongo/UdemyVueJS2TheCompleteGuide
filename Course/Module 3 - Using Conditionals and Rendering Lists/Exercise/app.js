@@ -1,6 +1,7 @@
 new Vue({
   el: '#exercise',
   data: {
+    show: true,
     array: ['Max', 'Anna', 'Chris', 'Manu'],
     myObject: {
       title: 'Lord of the Rings',
