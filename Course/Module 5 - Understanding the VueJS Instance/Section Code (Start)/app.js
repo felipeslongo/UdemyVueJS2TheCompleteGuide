@@ -3,6 +3,10 @@ var data = {
   showParagraph: false
 };
 
+Vue.component('hello', {
+  template: '<h1>HELLO! From Component!</h1>'
+})
+
 var v1 = new Vue({
   // el: '#app1',
   data: data,
