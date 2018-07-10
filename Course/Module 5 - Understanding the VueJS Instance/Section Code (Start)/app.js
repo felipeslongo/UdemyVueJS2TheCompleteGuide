@@ -4,7 +4,7 @@ var data = {
 };
 
 var v1 = new Vue({
-  el: '#app1',
+  // el: '#app1',
   data: data,
   methods: {
     show: function() {
@@ -27,6 +27,9 @@ var v1 = new Vue({
   }
 });
 
+//Samething as el property
+v1.$mount('#app1');
+
 v1.newProp = "New!";
 console.log(v1.newProp);
 console.log(data === v1.$data);
@@ -47,4 +50,13 @@ var v2 = new Vue({
     }
   }
 });
+
+var vm3 = new Vue({
+  template: '<h1>HELLO!!</h1>'
+});
+
+vm3.$mount('#app3');
+or
+vm3.$mount();
+document.getElementById('app3').appendChild(vm3.$el);
 
